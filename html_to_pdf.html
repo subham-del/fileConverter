@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+   
+<head>
+    <style>
+        div{
+            border: 3px dashed #BDBDBD;
+            position: absolute;
+            top:-90px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+         height: 300px;
+         width: 700px;
+         border-radius: 10px;
+        
+        }
+        #cloudicon{
+            display: block;
+            color: #D32F2F;
+            padding-left: 44%;
+            padding-top: 5%;
+            font-size: 80px;
+           
+        }
+        h2{
+            font-size: 30px;
+            color: #D32F2F;
+            text-align: center;
+            margin: 0px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .loader {
+            border: 6px solid #f3f3f3; /* Light grey */
+            border-top: 6px solid #D32F2F; /* Blue */
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display:none;
+            animation: spin 2s linear infinite;
+          }
+          
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+       
+          h5{
+            padding: 0px;
+            text-align: center;
+            font: 1em sans-serif;
+           
+            color:  #9E9E9E;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          }
+          h1{
+            text-align: center;
+            font: 1em sans-serif;
+            margin: 0px;
+            font-size: 21px;
+            color: #D32F2F;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          }
+        label{
+            margin: auto;
+            text-align: center;
+            padding-top: 10px;
+            display: block;
+            width: 200px;
+            height: 30px;
+            
+            outline: 0px;
+            color:#D32F2F;
+           
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         
+        }
+        #conversion-text{
+            display: none;
+            color: #fff;
+            text-align: center;
+            margin-top: 260px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body {
+            background-color: #EEEEEE;
+            animation: fadeInAnimation ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+       
+     </style>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+   
+    <title></title>
+</head>
+
+<body id="body">
+    
+    <h2>Cloud File Converter For</h2>
+    <h1>html to pdf</h1>
+    <h5>
+        Cloud Converter is an online file converter. We support pdf,word,png,jpeg,jpg<br> and presentation formats. To get started, use the button below<br> and select files to convert from your computer.
+    </h5>
+    <div>
+        <i id="cloudicon" class="bi bi-cloud-arrow-up"></i>
+        <form id="myForm" action="/htmlToPdf" enctype="multipart/form-data" method="post">
+        <label id="filelabel" for="file">Click, or drop your files here</label>
+        <input id="file" style="display:none"  name="file" type="file"  class="btn btn-primary" width="200px" height="100px"/>
+        
+    </form>
+        
+    </div>
+    <div class="loader"></div>
+    <h1 id="conversion-text">Converting html into pdf...</h1>
+    <script>
+        document.querySelector('#file').addEventListener('change',()=>{
+           var filename=document.querySelector('#file').value.split('\\')
+           document.querySelector('#filelabel').innerHTML= filename[2]
+           let t = setTimeout(function () {
+            document.querySelector(".loader").style.display = "block";
+           document.querySelector("#conversion-text").style.display = "block";
+           document.querySelector('#body').style.backgroundColor="#BDBDBD"
+            window.clearTimeout(t);		// clear time out.
+        },1500);
+          
+          // document.querySelector('#filelabel').style.fontSize="10px"
+           
+            let tID = setTimeout(function () {
+                document.getElementById("myForm").submit();
+                window.clearTimeout(tID);		// clear time out.
+            }, 4000);
+            
+       })
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+   #btn{
+    border: 0px none transparent;
+    background-color: #7C4DFF;
+    border-radius: 24px;
+    color:#fff;
+    margin-right: 20px;
+   }
+  </style>
+<!--  
+  <link rel="stylesheet" type="text/css" href="style.css" /> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <title></title>
+</head>
+
+<body>
+  <nav class="navbar navbar-light" style="background-color: white;">
+    <a class="navbar-brand p-2" href="#"><img src="file.png" width="40px"> Format Converter</a>
+    <!-- <form class="d-flex">
+      
+      <button id="btn" class="btn" type="submit">Login</button>
+    </form> -->
+  </nav>
+<div class="container-fluid" style="height:1000px;background-color:#EEEEEE" >
+ 
+    <div class="row h-75 p-5">
+      <div class="col">
+       
+       <center> <div class=" border shadow-lg h-100" style="width:1100px;background-color:white">
+          <div class="row" style="padding-left:50px;padding-right:50px;padding-top:20px;padding-bottom:0px;">
+            <div id="pdf-to-word" class="col-3" style="height:265px;cursor:pointer">
+              <i id="pdf1-icon" class="fa-regular fa-file-pdf p-3" style="font-size:40px;color:red"></i><i class="fa-solid fa-arrow-right" style="font-size:25px;" ></i><i id="word1-icon" class="fa-regular fa-file-word p-3" style="font-size:40px;color:#64B5F6"></i>
+              <h4 style="padding-left: 10px;padding-top:0px">Pdf to Word</h4>
+              <p style="font-size: 14px;padding-left: 10px">Easily convert your PDF files<br> into easy to edit DOC and<br> DOCX documents. The<br> converted WORD document is <br> almost 100% accurate.</p>
+            </div>
+            <div id="images-to-pdf" class="col-3" style="height:265px;cursor:pointer">
+              <i id="image1-icon" class="fa-regular fa-file-image p-3" style="font-size:40px;color:#FFEB3B"></i><i class="fa-solid fa-arrow-right" style="font-size:25px;" ></i><i id="pdf3-icon" class="fa-regular fa-file-pdf p-3" style="font-size:40px;color:red"></i>
+              <h4 style="padding-left: 10px;padding-top:0px">Images to Pdf</h4>
+              <p style="font-size: 14px;padding-left: 10px">Convert all your images to a <br>single pdf file</p>
+            </div>
+            <div id="word-to-pdf" class="col-3" style="height:265px;cursor:pointer">
+              <i id="word2-icon" class="fa-regular fa-file-word p-3" style="font-size:40px;color:#64B5F6"></i>  <i class="fa-solid fa-arrow-right" style="font-size:25px;" ></i><i id="pdf2-icon" class="fa-regular fa-file-pdf p-3" style="font-size:40px;color:red"></i>
+              <h4 style="padding-left: 10px;padding-top:0px">Word to Pdf</h4>
+              <p style="font-size: 14px;padding-left: 10px">Make DOC and DOCX files<br> easy to read by converting <br>them to PDF.</p>
+            </div>
+            <div id="html-to-pdf" class="col-3" style="height:265px;cursor:pointer">
+              <i id="html-icon" class="fa-solid fa-file-code p-3" style="font-size:40px;color:#673AB7"></i><i class="fa-solid fa-arrow-right" style="font-size:25px;" ></i><i id="pdf4-icon" class="fa-regular fa-file-pdf p-3" style="font-size:40px;color:red"></i>    
+              <h4 style="padding-left: 10px;padding-top:0px">HTMLto Pdf</h4>
+              <p style="font-size: 14px;padding-left: 10px">Convert any html content or<br> html page to PDF. </p>
+            </div>
+          </div>
+          <div class="row" style="padding-left:50px;padding-right:50px;padding-top:20px">
+            <div id="png-to-jpeg" class="col-3" style="height:265px;cursor:pointer">
+              <i id="image2-icon" class="fa-regular fa-file-image p-3" style="font-size:40px;color:#FFEB3B"></i><i class="fa-solid fa-arrow-right" style="font-size:25px;" ></i> <i id="image3-icon" class="fa-regular fa-file-image p-3" style="font-size:40px;color:#FFEB3B"></i>
+              <h4 style="padding-left: 10px;padding-top:0px">PNG to JPEG</h4>
+              <p style="font-size: 14px;padding-left: 10px">Best way to convert your<br> PNG to JPEG file in seconds.<br> 100% free, secure and easy <br>to use! </p>
+            </div>
+            <div id="images-to-gif" class="col-3" style="height:265px;cursor:pointer">
+               <i id="gif-icon" class="bi bi-filetype-gif p-3" style="font-size:40px;color:darkcyan"></i>  <i class="fa-solid fa-arrow-right" style="font-size:25px;" ></i>  <i id="image4-icon" class="fa-regular fa-file-image p-3" style="font-size:40px;color:#FFEB3B"></i>
+              <h4 style="padding-left: 10px;padding-top:0px">GIF to IMAGES</h4>
+              <p style="font-size: 14px;padding-left: 10px">Free online image converter<br> to convert images to the GIF<br> format.</p>
+            </div>
+            <div id="pdf-to-images" class="col-3" style="height:265px;cursor:pointer">
+              <i id="pdf5-icon" class="fa-regular fa-file-pdf p-3" style="font-size:40px;color:red"></i><i class="fa-solid fa-arrow-right" style="font-size:25px;" ></i>  <i id="image5-icon" class="fa-regular fa-file-image p-3" style="font-size:40px;color:#FFEB3B"></i>
+              <h4 style="padding-left: 10px;padding-top:0px">Pdf to Images</h4>
+              <p style="font-size: 14px;padding-left: 10px">Free online service to convert<br> a PDF file to a set of optimized<br> images. It provides perfect image<br> quality, allows mass conversion.</p>
+            </div>
+            <div id="video-to-audio" class="col-3" style="height:265px;cursor:pointer">
+              <i id="video-icon" class="bi bi-filetype-mp4 p-3"  style="font-size:40px;color:#00ACC1"></i>  <i class="fa-solid fa-arrow-right" style="font-size:25px;" ></i> <i id="audio-icon" class="bi bi-filetype-mp3" style="font-size:40px;color:#303F9F"></i>
+              <h4 style="padding-left: 10px;padding-top:0px">Video to Audio</h4>
+              <p style="font-size: 14px;padding-left: 10px">Best way to convert your MP4<br> to MP3 file in seconds. 100% <br>free, secure and easy to use! </p>
+            </div>
+          </div>
+        </div></center>
+      </div>
+
+    </div>
+
+    </div>
+
+
+   
+   
+    <!-- <div class="dropdown" >
+      <button style="margin-top:150px;height:60px;width:240px;font-size:18px" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-mdb-toggle="dropdown"
+        aria-expanded="false">
+        Select conversion
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li style="font-size:15px"><a class="dropdown-item" href="pdf_to_doc.html">PDF to WORD</a></li>
+        <li><a class="dropdown-item" href="docx_to_pdf.html">WORD to PDF</a></li>
+        <li><a class="dropdown-item" href="image_to_pdf.html">Images to pdf</a></li>
+        <li><a class="dropdown-item" href="#">JPEG to PNG</a></li>
+        <li><a class="dropdown-item" href="png_to_jpeg.html">PNG to JPEG</a></li>
+        <li><a class="dropdown-item" href="images_to_gif.html">IMAGES to GIF</a></li>
+        <li><a class="dropdown-item" href="html_to_pdf.html">HTML TO PDF</a></li>
+        <li><a class="dropdown-item" href="pdf_to_images.html">PDF TO IMAGES</a></li>
+      </ul>
+    </div> -->
+    <!-- <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"
+  ></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script>
+      document.querySelector('#pdf-to-word').addEventListener('mouseover',()=>{
+       // document.querySelector('#pdf-to-word').style.backgroundColor="#E0E0E0"
+        document.querySelector('#pdf1-icon').setAttribute('class',"fa-regular fa-file-pdf fa-beat p-3")
+        document.querySelector('#word1-icon').setAttribute('class',"fa-regular fa-file-word fa-beat p-3")
+      })
+      document.querySelector('#pdf-to-word').addEventListener('click',()=>{
+        window.location.href="pdf_to_doc.html"
+      })
+      document.querySelector('#pdf-to-word').addEventListener('mouseout',()=>{
+        document.querySelector('#pdf1-icon').setAttribute('class',"fa-regular fa-file-pdf  p-3")
+        document.querySelector('#word1-icon').setAttribute('class',"fa-regular fa-file-word p-3")
+      })
+      document.querySelector('#word-to-pdf').addEventListener('mouseover',()=>{
+        document.querySelector('#word2-icon').setAttribute('class',"fa-regular fa-file-word fa-beat p-3")
+        document.querySelector('#pdf2-icon').setAttribute('class',"fa-regular fa-file-pdf fa-beat p-3")
+      })
+      document.querySelector('#word-to-pdf').addEventListener('click',()=>{
+        window.location.href="http://localhost:3000/docx_to_pdf.html"
+      })
+      document.querySelector('#word-to-pdf').addEventListener('mouseout',()=>{
+        document.querySelector('#pdf2-icon').setAttribute('class',"fa-regular fa-file-pdf  p-3")
+        document.querySelector('#word2-icon').setAttribute('class',"fa-regular fa-file-word p-3")
+      })
+      document.querySelector('#images-to-pdf').addEventListener('mouseover',()=>{
+        document.querySelector('#image1-icon').setAttribute('class',"fa-regular fa-file-image fa-beat p-3")
+        document.querySelector('#pdf3-icon').setAttribute('class',"fa-regular fa-file-pdf fa-beat p-3")
+      })
+      document.querySelector('#images-to-pdf').addEventListener('click',()=>{
+        window.location.href="image_to_pdf.html"
+      })
+      document.querySelector('#images-to-pdf').addEventListener('mouseout',()=>{
+        document.querySelector('#image1-icon').setAttribute('class',"fa-regular fa-file-image p-3")
+        document.querySelector('#pdf3-icon').setAttribute('class',"fa-regular fa-file-pdf p-3")
+      })
+      document.querySelector('#html-to-pdf').addEventListener('mouseover',()=>{
+        document.querySelector('#pdf4-icon').setAttribute('class',"fa-regular fa-file-pdf fa-beat p-3")
+        document.querySelector('#html-icon').setAttribute('class',"fa-regular fa-file-code fa-beat p-3")
+      })
+      document.querySelector('#html-to-pdf').addEventListener('click',()=>{
+        window.location.href="html_to_pdf.html"
+      })
+      document.querySelector('#html-to-pdf').addEventListener('mouseout',()=>{
+        document.querySelector('#pdf4-icon').setAttribute('class',"fa-regular fa-file-pdf  p-3")
+        document.querySelector('#html-icon').setAttribute('class',"fa-regular fa-file-code p-3")
+      })
+      document.querySelector('#png-to-jpeg').addEventListener('mouseover',()=>{
+        document.querySelector('#image2-icon').setAttribute('class',"fa-regular fa-file-image fa-beat p-3")
+        document.querySelector('#image3-icon').setAttribute('class',"fa-regular fa-file-image fa-beat p-3")
+      })
+      document.querySelector('#png-to-jpeg').addEventListener('click',()=>{
+        window.location.href="png_to_jpeg.html"
+      })
+      document.querySelector('#png-to-jpeg').addEventListener('mouseout',()=>{
+        document.querySelector('#image2-icon').setAttribute('class',"fa-regular fa-file-image p-3")
+        document.querySelector('#image3-icon').setAttribute('class',"fa-regular fa-file-image p-3")
+      })
+      
+      document.querySelector('#pdf-to-images').addEventListener('mouseover',()=>{
+        document.querySelector('#image5-icon').setAttribute('class',"fa-regular fa-file-image fa-beat p-3")
+        document.querySelector('#pdf5-icon').setAttribute('class',"fa-regular fa-file-pdf fa-beat p-3")
+      })
+      document.querySelector('#pdf-to-images').addEventListener('click',()=>{
+        window.location.href="pdf_to_images.html"
+      })
+      document.querySelector('#pdf-to-images').addEventListener('mouseout',()=>{
+        document.querySelector('#pdf5-icon').setAttribute('class',"fa-regular fa-file-pdf p-3")
+        document.querySelector('#image5-icon').setAttribute('class',"fa-regular fa-file-image p-3")
+      })
+      
+      document.querySelector('#images-to-gif').addEventListener('click',()=>{
+        window.location.href="gif_to_images.html"
+      })
+
+      document.querySelector('#video-to-audio').addEventListener('click',()=>{
+        window.location.href="video_to_audio.html"
+      })
+     
+      
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</body>
+</html>
